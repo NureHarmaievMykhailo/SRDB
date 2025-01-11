@@ -1,25 +1,35 @@
 package org.example.autoshop.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Services")
-public class Service {
+public class ServiceModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int serviceId;
+
+    @Column(name = "SERVICE_ID")
+    private Integer serviceId;
+
+    @Column(name = "SERVICE_NAME")
     private String serviceName;
+
+    @Column(name = "BASE_COST")
     private double baseCost;
+
+    @Column(name = "DURATION_ESTIMATE")
     private int durationEstimate;
+
+    @Column(name = "Description")
     private String description;
 
     // Getters and setters
 
-    public int getServiceId() {
+    public Integer getServiceId() {
         return serviceId;
     }
 
-    public void setServiceId(int serviceId) {
+    public void setServiceId(Integer serviceId) {
         this.serviceId = serviceId;
     }
 

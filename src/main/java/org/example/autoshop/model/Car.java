@@ -1,13 +1,18 @@
 package org.example.autoshop.model;
 
-import javax.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 
 @Entity
 @Table(name = "Cars")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int carId;
+    private Integer carId;
     private String model;
     private String ownerName;
     private String contactNumber;
